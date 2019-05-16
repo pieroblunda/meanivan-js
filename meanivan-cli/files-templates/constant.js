@@ -1,0 +1,1 @@
+angular.module('App').constant('my-name-here', {});

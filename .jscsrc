@@ -1,0 +1,8 @@
+{
+  "esnext": true,
+  "verbose": true,
+  "disallowSpaceBeforeComma": true,
+  "requireCommaBeforeLineBreak": true,
+  "requireDotNotation": true,
+  "requireSemicolons": true
+}

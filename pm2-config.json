@@ -1,0 +1,26 @@
+{
+  "apps": [
+    {
+      "name": "meanivan-js",
+      "script": "./app.js",
+      "watch": false,
+      "instances": 0,
+      "exec_mode": "cluster",
+      "ignore_watch": [
+        "client",
+        ".git",
+        "node_modules"
+      ],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "env_development": {
+        "NODE_ENV": "development"
+      },
+      "env_testing": {
+        "NODE_ENV": "testing"
+      },
+      "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }
+  ]
+}

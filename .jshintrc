@@ -1,0 +1,34 @@
+{
+  "node": true,
+  "mocha": true,
+  "jasmine": true,
+  "browser": true,
+  "esnext": true,
+  "bitwise": false,
+  "curly": true,
+  "eqeqeq": true,
+  "latedef": "nofunc",
+  "noarg": true,
+  "undef": true,
+  "unused": false,
+  "strict": true,
+  "quotmark": "single",
+  "trailing": true,
+  "smarttabs": false,
+  "bitwise": false,
+  "globals": {
+    "angular": true,
+    "App": true,
+    "i18n": true
+  },
+  "predef": [
+    "inject",
+    "by",
+    "browser",
+    "element",
+    "$"
+  ],
+  "devel": false,
+  "indent": 2,
+  "noempty": true
+}

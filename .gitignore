@@ -1,0 +1,10 @@
+node_modules
+mongod.bat
+client/constants/dictionary.js
+*.log
+*.directory
+coverage
+**/node_modules
+*.DS_Store
+public/js/*
+public/css/*
