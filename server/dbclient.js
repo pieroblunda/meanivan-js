@@ -6,10 +6,12 @@ var state = {
   db: null
 };
 
-exports.connect = function(url, done) {
+exports.connect = function(dbConfig, done) {
   if (state.db) {
     return done();
   }
+
+  let url = 'mongodb://localhost:27017/' + dbConfig.dbName
 
   MongoClient.connect(url, function(err, db) {
     if (err) {

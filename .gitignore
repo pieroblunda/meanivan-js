@@ -1,5 +1,6 @@
 node_modules
 mongod.bat
+.env
 client/constants/dictionary.js
 *.log
 *.directory
