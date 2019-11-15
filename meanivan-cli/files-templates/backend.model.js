@@ -1,6 +1,5 @@
 'use strict';
-const environment = require('../environment');
-const db = require(environment.serverPath + '/dbclient');
+const db = require(process.env.SERVER_PATH + '/dbclient');
 const ObjectID = require('mongodb').ObjectID;
 
 const MyNewServerModelCapitalized = function() {
@@ -9,14 +8,14 @@ const MyNewServerModelCapitalized = function() {
     getter: getter,
     setter: setter
   };
-  
+
   function getter(inputObj){
     return db.get().collection('MyNewServerModelLowercase').insert({
       foo: inputObj.foo,
       bar: inputObj.bar
-    });  
+    });
   }
-  
+
   function setter(inputObj){
     return db.get().collection('MyNewServerModelLowercase').update(
     {
@@ -27,7 +26,7 @@ const MyNewServerModelCapitalized = function() {
     },{
       upsert: true
     });
-    
+
   }
 
   return model;

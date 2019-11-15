@@ -1,6 +1,5 @@
 'use strict';
-const environment = require('../environment'),
-      Example = require(environment.serverPath + '/models/example.server.model');
+const Example = require(process.env.SERVER_PATH + '/models/example.server.model');
 
 /**
 @jsDoc

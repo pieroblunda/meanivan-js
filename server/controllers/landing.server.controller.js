@@ -1,12 +1,11 @@
 'use strict';
-var environment = require('../environment'),
-    languageParser = require('accept-language-parser');
+var languageParser = require('accept-language-parser');
 
 
 module.exports.load = function(req, res) {
   res.render('landing', {
     lang: languageParser.pick(['es', 'en', 'pt'], req.headers['accept-language']) || 'es',
-    environment: environment
+    isDevelopment: true
   });
 };
 

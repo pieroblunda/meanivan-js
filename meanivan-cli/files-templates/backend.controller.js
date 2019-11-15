@@ -1,6 +1,5 @@
 'use strict';
-const environment = require('../environment'),
-      MyNewServerModelCapitalized = require(environment.serverPath + '/models/MyNewServerModelLowercase.server.model');
+const MyNewServerModelCapitalized = require(process.env.SERVER_PATH + '/models/MyNewServerModelLowercase.server.model');
 
 /**
 @jsDoc

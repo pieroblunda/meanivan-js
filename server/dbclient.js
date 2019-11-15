@@ -1,5 +1,6 @@
+// @TODO: http://mongodb.github.io/node-mongodb-native/3.3/tutorials/connect/
+//- Cambiar el connector a mongodb 
 'use strict';
-const environment = require('./environment');
 const MongoClient = require('mongodb').MongoClient;
 
 var state = {
@@ -11,7 +12,8 @@ exports.connect = function(dbConfig, done) {
     return done();
   }
 
-  let url = 'mongodb://localhost:27017/' + dbConfig.dbName
+  //- @TODO: do nor support load balancer
+  let url = 'mongodb://localhost:27017/' + dbConfig.dbName;
 
   MongoClient.connect(url, function(err, db) {
     if (err) {

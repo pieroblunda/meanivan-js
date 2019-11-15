@@ -1,6 +1,5 @@
 'use strict';
-const environment = require('../environment');
-const db = require(environment.serverPath + '/dbclient');
+const db = require(process.env.SERVER_PATH + '/dbclient');
 const ObjectID = require('mongodb').ObjectID;
 
 const Example = function() {
@@ -9,7 +8,7 @@ const Example = function() {
     getter: getter,
     setter: setter
   };
-  
+
   function getter(inputObj){
     /* @ToDo: List only explicit doc attributes */
     /* @ToDo: Add support for pagination */
@@ -19,17 +18,17 @@ const Example = function() {
           reject(err);
         } else {
           resolve(items);
-        }          
+        }
       });
     });
   }
-  
+
   function findById(id){
     return db.get().collection('example').findOne({
       _id: id
     });
   }
-  
+
   function setter(inputObj){
     return new Promise(function(resolve, reject) {
       db.get().collection('example').insertOne(inputObj, function (error, response) {
