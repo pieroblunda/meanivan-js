@@ -1,7 +1,6 @@
 'use strict';
-const db = require(process.env.SERVER_PATH + '/dbclient');
+const db = require(process.env.BASE_PATH + '/framework/dbclient');
 const ObjectID = require('mongodb').ObjectID;
-
 const Example = function() {
 
   const model = {

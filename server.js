@@ -2,7 +2,7 @@
 /* @ToDo: https://blog.cloud66.com/installing-nginx-and-http-2-in-your-local-development-environment/ */
 'use strict';
 const app = require('express')(),
-      dbclient = require('./server/dbclient'),
+      dbclient = require('./framework/dbclient'),
       routes = require('./server/routes'),
       colors = require('colors');
 
