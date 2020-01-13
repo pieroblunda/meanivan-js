@@ -18,6 +18,10 @@ pb-framework
 ## dbClient tiene que estar adentro de la carpeta framework
 ## Actualizar todas las dependencias que se queja Git
 ## npm i dice: WARNING! this npm package "angular-ui-router" has been renamed to "@uirouter/angularjs".
+## .github
+## .editorcofig
+## app.use(express.json())
+
 
 ### Meanivan
 
