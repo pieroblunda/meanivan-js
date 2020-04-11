@@ -1,0 +1,13 @@
+TODO: Support for Fixtures
+TODO: Support for ES6
+TODO: Support for grunt/gulp/webpack
+TODO: Support for typeScript
+TODO: Support for Sass/Less/VanillaCss
+TODO: Support for Angualar 6
+TODO: Support for .github
+TODO: Support for .editorcofig
+TODO: Support for dotenv environments https://github.com/motdotla/dotenv-expand
+TODO: Update npm packages
+TODO: dbClient must be inside framework folder
+TODO: app.use(express.json())
+TODO: Create an .env file if it does not exist when server starts
