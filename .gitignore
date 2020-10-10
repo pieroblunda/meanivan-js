@@ -9,3 +9,5 @@ coverage
 *.DS_Store
 public/js/*
 public/css/*
+!public/js/.gitkeep
+!public/css/.gitkeep
