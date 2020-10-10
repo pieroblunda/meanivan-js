@@ -12,10 +12,7 @@ module.exports.init = function(){
   console.log('=============================================================');
 
   // Init DB connection
-  let dbConfig = {
-    dbName: process.env.DB_NAME
-  };
-  dbclient.connect(dbConfig, function(err){
+  dbclient.connect(function(err){
 
     if(err){
       console.log(colors.red('✗') + ' Error on mongodb connection: ', err);
