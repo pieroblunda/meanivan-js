@@ -42,6 +42,7 @@ fs.writeFile('client/constants/dictionary.js', ngDictionary, function (err) {
 var globOptionsB = {}; // any regular node-glob option
 var filesB = GlobArray.sync(patterns, globOptions);
 var uglifiedB = UglifyJS.minify(files).code;
+
 // Espanol
 fs.writeFile('public/js/app-EN.min.js', uglifiedB, function (err) {
   if (err) return console.log(err);
