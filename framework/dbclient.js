@@ -1,27 +1,29 @@
-// @TODO: http://mongodb.github.io/node-mongodb-native/3.3/tutorials/connect/
-//- Cambiar el connector a mongodb
-'use strict';
 const MongoClient = require('mongodb').MongoClient;
+const assert = require('assert');
 
 var state = {
   db: null
 };
 
-exports.connect = function(done) {
+exports.connect = function(cb) {
   if (state.db) {
-    return done();
+    return cb();
   }
 
+  // Connection URL
   //- @TODO: do nor support load balancer
-  let url = 'mongodb://localhost:27017/' + process.env.DB_NAME;
+  const url = 'mongodb://localhost:27017';
+  const dbName = process.env.DB_NAME;
 
-  MongoClient.connect(url, function(err, db) {
-    if (err) {
-      return done(err);
-    }
-    state.db = db;
-    done();
+  // Use connect method to connect to the server
+  MongoClient.connect(url, function(err, client) {
+    assert.equal(null, err);
+    console.log("Connected successfully to server");
+    state.db = client.db(dbName);
+    //client.close();
+    cb();
   });
+
 };
 
 exports.get = function() {
