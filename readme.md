@@ -10,19 +10,18 @@ In order to develop better and faster, use the command line tools provided in th
 $ meanivan help
 ```
 
-## Reports
+## Install instructions
 
-#### Linter
 ```bash
-$ grunt lint
-```
+# Clone repository
+$ git@github.com:pieroblunda/meanivan-js.git
 
-#### Test
-```bash
-$ mocha
-```
+# Move to main folder
+$ cd meanivan-js
 
-#### Coverage
-```bash
-$ grunt coverage
+# Set environment variables
+$ cp framework/files-templates/.env-template .env
+
+# Run the app
+$ node app.js
 ```
